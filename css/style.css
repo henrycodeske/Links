@@ -1,0 +1,124 @@
+/* Base Styles */
+:root {
+    --background-gradient-light: linear-gradient(to right, #04343c, #04836b);
+    --background-gradient-dark: linear-gradient(to right, #11181c, #11181c);
+    --text-light: #d8d8d8;
+    --text-dark: #d8d8d8;
+    --link-gradient: linear-gradient(45deg, #f06, #f79);
+    --link-hover-gradient: linear-gradient(45deg, #c03, #e90);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-gradient-light); /* Light mode gradient background */
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-light);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+}
+
+.links-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    background: var(--link-gradient);
+    color: var(--text-dark);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.link-button:hover {
+    background: var(--link-hover-gradient);
+    transform: scale(1.05);
+}
+
+.link-icon {
+    font-size: 24px; /* Ensure icons are visible and consistent */
+}
+
+.link-text {
+    font-size: 16px;
+    margin-left: 10px; /* Space between icon and text */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: var(--background-gradient-dark); /* Dark mode gradient background */
+    color: var(--text-dark);
+}
+
+body.dark-mode #theme-icon {
+    content: "\f186"; /* Unicode for moon icon */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-light);
+}
